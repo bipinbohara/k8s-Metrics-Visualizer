@@ -15,7 +15,9 @@ rm -rf go.mod
 go mod init kube-metrics
 go get github.com/go-redis/redis/v8
 go get golang.org/x/net/context
-### go run kube-metrics.go
+
+## to run the program
+# go run kube-metrics.go
 ```
 
 Step 3:
@@ -27,7 +29,11 @@ export NODE_NAMES="ubuntu24-worker2,ubuntu24-worker5,ubuntu24-worker6"
 Step 4:
 ```
 redis-cli
-keys *
+> keys *
+```
 
-
+#### To delete db records
+```
+redisc-cli
+> flushall
 ```
