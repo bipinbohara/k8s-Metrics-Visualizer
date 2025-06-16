@@ -9,6 +9,7 @@ curl -s http://localhost:8001/api/v1/nodes/$(hostname)/proxy/stats/summary | jq
 
 Step 2:
 ```
+## to remove previous build of go programs
 rm -rf go.sum
 rm -rf go.mod
 
