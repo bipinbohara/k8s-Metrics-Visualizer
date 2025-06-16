@@ -32,6 +32,11 @@ redis-cli
 > keys *
 ```
 
+To see logs of individual containers
+```
+ZRANGE util:<pod>:<container> 0 -1 WITHSCORES
+```
+
 #### To delete db records
 ```
 redisc-cli
