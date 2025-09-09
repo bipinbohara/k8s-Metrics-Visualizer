@@ -10,7 +10,7 @@ import csv
 r = redis.Redis(host='localhost', port=6379, decode_responses=True)
 
 # Example key
-key = "util:open-webui-0:open-webui"
+key = "util:gpt120b-vllm-5675bf8ccb-rdn8z:gpt120b-vllm"
 
 # Fetch all data
 raw_data = r.zrange(key, 0, -1, withscores=True)
