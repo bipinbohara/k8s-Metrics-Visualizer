@@ -7,7 +7,7 @@ MONITOR_INTERVAL=1  # Adjust this to change how often it runs (in seconds)
 
 while true; do
     echo "Running kubelet_monitor.go..."
-    go run kube-metrics.go
+    python3 kubeMetrics.py
     echo "Sleeping for $MONITOR_INTERVAL seconds..."
     sleep $MONITOR_INTERVAL
     if [ -f stop_monitor ]; then
@@ -15,3 +15,15 @@ while true; do
       break
     fi
 done
+
+
+# while true; do
+#     echo "Running kubelet_monitor.go..."
+#     go run kube-metrics.go
+#     echo "Sleeping for $MONITOR_INTERVAL seconds..."
+#     sleep $MONITOR_INTERVAL
+#     if [ -f stop_monitor ]; then
+#       echo "Stop signal detected."
+#       break
+#     fi
+# done
